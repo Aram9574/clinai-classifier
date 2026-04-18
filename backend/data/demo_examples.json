@@ -1,0 +1,89 @@
+{
+  "description": "Pre-built example AI systems used in demo mode. Each entry is the input to /classify. Classifications are pre-computed and stored in demo_classifications.json.",
+  "examples": [
+    {
+      "id": "icu_readmission",
+      "label_en": "ICU readmission risk predictor (HIGH_RISK)",
+      "label_es": "Predicción de reingreso en UCI (ALTO RIESGO)",
+      "description_en": "Describe: supports clinical discharge decisions from the ICU.",
+      "description_es": "Descripción: apoya decisiones clínicas de alta desde la UCI.",
+      "system_name": "ReadmitAI",
+      "description": "Machine learning model that predicts 30-day ICU readmission risk from EHR data, used at discharge to support triage and follow-up decisions by the attending physician.",
+      "intended_purpose": "Support clinical discharge and triage decisions",
+      "data_inputs": ["EHR", "Vital signs", "Lab results"],
+      "outputs_produced": ["readmission risk score", "risk tier"],
+      "deployment_context": "Tertiary hospital ICU",
+      "affects_clinical_decision": true
+    },
+    {
+      "id": "oncology_treatment",
+      "label_en": "Oncology treatment recommender (HIGH_RISK, SaMD)",
+      "label_es": "Recomendador de tratamiento oncológico (ALTO RIESGO, SaMD)",
+      "description_en": "AI recommending chemotherapy protocols — SaMD under MDR.",
+      "description_es": "IA que recomienda protocolos de quimioterapia — SaMD bajo MDR.",
+      "system_name": "OncoAdvisor",
+      "description": "AI diagnostic and treatment recommendation system that suggests chemotherapy protocols for oncology patients based on tumour biomarker panels, imaging, and genomic data. Intended as Software as a Medical Device under Regulation (EU) 2017/745.",
+      "intended_purpose": "Provide treatment protocol recommendations for oncologists",
+      "data_inputs": ["EHR", "Imaging", "Lab results", "Genomic data"],
+      "outputs_produced": ["recommended protocol", "confidence", "drug list"],
+      "deployment_context": "Comprehensive cancer centre",
+      "affects_clinical_decision": true
+    },
+    {
+      "id": "note_summariser",
+      "label_en": "Clinical note summariser for research (LIMITED_RISK)",
+      "label_es": "Resumidor de notas clínicas para investigación (RIESGO LIMITADO)",
+      "description_en": "NLP on de-identified notes for research — no clinical decisions.",
+      "description_es": "NLP sobre notas anonimizadas para investigación — sin decisiones clínicas.",
+      "system_name": "NoteBrief",
+      "description": "NLP system that extracts structured data and summarises clinical notes for downstream research use on de-identified records. It does not produce clinical suggestions or treatment guidance. Researchers interact with outputs but the system does not inform individual patient care.",
+      "intended_purpose": "Research-facing summarisation of de-identified clinical notes",
+      "data_inputs": ["De-identified notes"],
+      "outputs_produced": ["structured summary"],
+      "deployment_context": "Research data platform",
+      "affects_clinical_decision": false
+    },
+    {
+      "id": "wearable_dashboard",
+      "label_en": "Consumer wearable dashboard (MINIMAL_RISK)",
+      "label_es": "Panel de wearable de consumo (RIESGO MÍNIMO)",
+      "description_en": "Fitness tracker dashboard — no clinical claims.",
+      "description_es": "Panel de fitness tracker — sin afirmaciones clínicas.",
+      "system_name": "StepSense",
+      "description": "Consumer wearable mobile dashboard that shows step count, resting heart rate, and sleep trends to the user. Wellness-only: no clinical claims, no recommendations, and no integration with any patient record. Purely informational consumer app.",
+      "intended_purpose": "Wellness and fitness tracking for end users",
+      "data_inputs": ["Wearable sensor data"],
+      "outputs_produced": ["trend charts"],
+      "deployment_context": "Consumer mobile app",
+      "affects_clinical_decision": false
+    },
+    {
+      "id": "patient_chatbot",
+      "label_en": "Patient-facing appointment chatbot (LIMITED_RISK)",
+      "label_es": "Chatbot de citas para pacientes (RIESGO LIMITADO)",
+      "description_en": "Conversational AI for booking appointments — Article 50 transparency applies.",
+      "description_es": "IA conversacional para reservar citas — aplica la transparencia del Art. 50.",
+      "system_name": "ClinicBot",
+      "description": "Patient-facing conversational chatbot that answers general questions about clinic opening hours, how to book appointments, and how to access test results. It interacts directly with patients via chat but does not provide any medical advice or clinical recommendations.",
+      "intended_purpose": "Answer administrative questions from patients and help book appointments",
+      "data_inputs": ["User chat messages"],
+      "outputs_produced": ["natural language reply", "booking slot"],
+      "deployment_context": "Outpatient clinic website",
+      "affects_clinical_decision": false
+    },
+    {
+      "id": "social_benefit_scoring",
+      "label_en": "Public social-benefit scoring (PROHIBITED)",
+      "label_es": "Puntuación social de beneficios públicos (PROHIBIDO)",
+      "description_en": "Social score for benefit eligibility — Article 5(1)(c).",
+      "description_es": "Puntuación social para elegibilidad de beneficios — Art 5(1)(c).",
+      "system_name": "HealthBenefitScore",
+      "description": "AI system used by a public authority to build a social score for citizens based on healthcare utilisation and lifestyle behaviour, used to grant or deny access to general social services and benefits over time.",
+      "intended_purpose": "Social scoring for benefit eligibility",
+      "data_inputs": ["Claims data", "Lifestyle signals"],
+      "outputs_produced": ["social score"],
+      "deployment_context": "National welfare agency",
+      "affects_clinical_decision": false
+    }
+  ]
+}

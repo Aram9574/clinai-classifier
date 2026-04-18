@@ -1,0 +1,476 @@
+{
+  "icu_readmission": {
+    "risk_level": "HIGH_RISK",
+    "annex_iii_categories": [
+      "Annex III, Point 5(b): AI systems intended to be used for making decisions on polysomnography testing to diagnose obstructive sleep apnoea, assessing the significance of cardiac arrhythmia disorders, and determining an individual's response to treatments, disease prognosis, risk of developing a disease, establishing a diagnosis, or determining treatment decisions"
+    ],
+    "article_5_flags": [],
+    "legal_basis": [
+      {
+        "article": "Article 6(1)",
+        "title": "Classification rules for high-risk AI systems",
+        "excerpt": "Irrespective of whether an AI system is placed on the market or put into service independently from the products referred to in points (a) and (b), that AI system shall be considered high-risk where both of the following conditions are fulfilled: (a) the AI system is intended to be used as a safety component of a product, or the AI system is itself a product, covered by the Union harmonisation legislation listed in Annex I; (b) the product whose safety component pursuant to point (a) is the AI system, or the AI system itself as a product, is required to undergo a third-party conformity assessment, with a view to the placing on the market or the putting into service of that product pursuant to the Union harmonisation legislation listed in Annex I.",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#art_6"
+      },
+      {
+        "article": "Annex III, Point 5(b)",
+        "title": "High-risk AI systems referred to in Article 6(2)",
+        "excerpt": "AI systems intended to be used for making decisions on polysomnography testing to diagnose obstructive sleep apnoea, assessing the significance of cardiac arrhythmia disorders, and determining an individual's response to treatments, disease prognosis, risk of developing a disease, establishing a diagnosis, or determining treatment decisions.",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#anx_III"
+      },
+      {
+        "article": "Article 6(2)",
+        "title": "Classification rules for high-risk AI systems",
+        "excerpt": "AI systems referred to in Annex III shall be considered high-risk.",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#art_6"
+      }
+    ],
+    "compliance_requirements": [
+      {
+        "id": "hr_risk_mgmt",
+        "article": "Article 9",
+        "requirement": "Establish, implement, document and maintain a risk management system running throughout the entire lifecycle of the AI system.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market — by 2 August 2026"
+      },
+      {
+        "id": "hr_data_governance",
+        "article": "Article 10",
+        "requirement": "Apply data governance practices to training, validation and testing datasets: relevance, representativeness, freedom from errors, and appropriate statistical properties. Examine for biases affecting health equity.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_technical_docs",
+        "article": "Article 11",
+        "requirement": "Draw up technical documentation demonstrating conformity with the requirements of Chapter III, Section 2. Must be kept up to date.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_record_keeping",
+        "article": "Article 12",
+        "requirement": "Enable automatic recording of events (logs) over the duration of the system lifetime to ensure traceability.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_transparency",
+        "article": "Article 13",
+        "requirement": "Design for sufficient transparency: provide clear instructions for use enabling deployers to interpret outputs appropriately in the clinical context.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_human_oversight",
+        "article": "Article 14",
+        "requirement": "Design for effective human oversight. In clinical contexts: ensure clinicians can override, interpret, and refuse AI outputs without automation bias.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_accuracy_robustness",
+        "article": "Article 15",
+        "requirement": "Achieve appropriate levels of accuracy, robustness and cybersecurity; document performance metrics and validation methodology.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_qms",
+        "article": "Article 17",
+        "requirement": "Establish a Quality Management System (QMS). Where the provider is already subject to ISO 13485 (MDR/IVDR), integration is permitted.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_conformity_assessment",
+        "article": "Article 43",
+        "requirement": "Undergo the applicable conformity assessment procedure. For SaMD (MDR/IVDR), this is typically performed by a Notified Body and combined with the existing medical device conformity assessment.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_ce_marking",
+        "article": "Article 48",
+        "requirement": "Affix the CE marking and draw up the EU declaration of conformity before placing the system on the market.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_registration",
+        "article": "Article 49",
+        "requirement": "Register the high-risk AI system in the EU database before placing it on the market or putting it into service.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_post_market",
+        "article": "Article 72",
+        "requirement": "Establish a post-market monitoring system to collect, document and analyse performance data throughout the lifetime of the system.",
+        "priority": "MANDATORY",
+        "deadline": "From placing on the market"
+      },
+      {
+        "id": "hr_incident_reporting",
+        "article": "Article 73",
+        "requirement": "Report serious incidents to the market surveillance authority without undue delay, and in any case within the deadlines specified.",
+        "priority": "MANDATORY",
+        "deadline": "Ongoing — within 15 days (or 2/10 days for serious incidents involving death or irreversible disruption)"
+      },
+      {
+        "id": "hr_fria",
+        "article": "Article 27",
+        "requirement": "Where the deployer is a public authority or entity providing public services, conduct a Fundamental Rights Impact Assessment (FRIA) before deployment.",
+        "priority": "CONDITIONAL",
+        "deadline": "Before first use"
+      }
+    ],
+    "confidence_score": 0.92,
+    "clinical_notes": "This system predicts 30-day ICU readmission risk and directly influences discharge triage decisions, which involve prognosis assessment and treatment pathway determination. While described as 'supporting' the physician, the system outputs risk tiers that operationally guide resource allocation (e.g., step-down unit vs. general ward vs. early discharge with outpatient follow-up). ICU discharge decisions carry significant clinical consequences: premature discharge increases mortality risk, while delayed discharge consumes scarce critical care resources. The system uses longitudinal EHR data including vital signs and laboratory results to stratify patients, which falls squarely within 'determining treatment decisions' and 'disease prognosis' under Annex III(5)(b). From a clinical workflow perspective, even if the final discharge decision rests with the attending physician, risk stratification tools that inform triage inherently shape decision-making, especially under time pressure and bed capacity constraints typical in ICU settings. The safety-critical nature of ICU discharge timing, combined with the system's prognostic function and direct integration into triage workflows, establishes this as high-risk regardless of whether it formally qualifies as SaMD under MDR/IVDR. Clinicians should ensure appropriate human oversight, validation against diverse patient populations (particularly vulnerable ICU subgroups), and transparent communication of model limitations to avoid automation bias in discharge decision-making.",
+    "samd_flag": true,
+    "requires_conformity_assessment": true,
+    "requires_notified_body": true
+  },
+  "oncology_treatment": {
+    "risk_level": "HIGH_RISK",
+    "annex_iii_categories": [
+      "Annex III, Point 5(b): AI systems intended to be used for making decisions on polysomnography",
+      "Annex III, Point 5(b): AI systems intended to be used for making decisions on health-related purposes"
+    ],
+    "article_5_flags": [],
+    "legal_basis": [
+      {
+        "article": "Article 6(1)",
+        "title": "Classification rules for high-risk AI systems",
+        "excerpt": "An AI system shall be considered high-risk where both of the following conditions are fulfilled: (a) the AI system is intended to be used as a safety component of a product, or the AI system is itself a product, covered by the Union harmonisation legislation listed in Annex I; (b) the product whose safety component pursuant to point (a) is the AI system, or the AI system itself as a product, is required to undergo a third-party conformity assessment with a view to the placing on the market or putting into service of that product pursuant to the Union harmonisation legislation listed in Annex I.",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+      },
+      {
+        "article": "Annex I, Section A, Point 14",
+        "title": "Union harmonisation legislation based on the New Legislative Framework",
+        "excerpt": "Regulation (EU) 2017/745 of the European Parliament and of the Council of 5 April 2017 on medical devices (MDR)",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+      },
+      {
+        "article": "Annex III, Point 5(b)",
+        "title": "High-risk AI systems referred to in Article 6(2)",
+        "excerpt": "AI systems intended to be used for making decisions on eligibility for public and private assistance benefits and services and to grant, reduce, revoke, or reclaim such benefits and services",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+      },
+      {
+        "article": "Article 6(2)",
+        "title": "Classification rules for high-risk AI systems",
+        "excerpt": "AI systems referred to in Annex III shall be considered high-risk.",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+      }
+    ],
+    "compliance_requirements": [
+      {
+        "id": "hr_risk_mgmt",
+        "article": "Article 9",
+        "requirement": "Establish, implement, document and maintain a risk management system running throughout the entire lifecycle of the AI system.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market — by 2 August 2026"
+      },
+      {
+        "id": "hr_data_governance",
+        "article": "Article 10",
+        "requirement": "Apply data governance practices to training, validation and testing datasets: relevance, representativeness, freedom from errors, and appropriate statistical properties. Examine for biases affecting health equity.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_technical_docs",
+        "article": "Article 11",
+        "requirement": "Draw up technical documentation demonstrating conformity with the requirements of Chapter III, Section 2. Must be kept up to date.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_record_keeping",
+        "article": "Article 12",
+        "requirement": "Enable automatic recording of events (logs) over the duration of the system lifetime to ensure traceability.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_transparency",
+        "article": "Article 13",
+        "requirement": "Design for sufficient transparency: provide clear instructions for use enabling deployers to interpret outputs appropriately in the clinical context.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_human_oversight",
+        "article": "Article 14",
+        "requirement": "Design for effective human oversight. In clinical contexts: ensure clinicians can override, interpret, and refuse AI outputs without automation bias.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_accuracy_robustness",
+        "article": "Article 15",
+        "requirement": "Achieve appropriate levels of accuracy, robustness and cybersecurity; document performance metrics and validation methodology.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_qms",
+        "article": "Article 17",
+        "requirement": "Establish a Quality Management System (QMS). Where the provider is already subject to ISO 13485 (MDR/IVDR), integration is permitted.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_conformity_assessment",
+        "article": "Article 43",
+        "requirement": "Undergo the applicable conformity assessment procedure. For SaMD (MDR/IVDR), this is typically performed by a Notified Body and combined with the existing medical device conformity assessment.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_ce_marking",
+        "article": "Article 48",
+        "requirement": "Affix the CE marking and draw up the EU declaration of conformity before placing the system on the market.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_registration",
+        "article": "Article 49",
+        "requirement": "Register the high-risk AI system in the EU database before placing it on the market or putting it into service.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_post_market",
+        "article": "Article 72",
+        "requirement": "Establish a post-market monitoring system to collect, document and analyse performance data throughout the lifetime of the system.",
+        "priority": "MANDATORY",
+        "deadline": "From placing on the market"
+      },
+      {
+        "id": "hr_incident_reporting",
+        "article": "Article 73",
+        "requirement": "Report serious incidents to the market surveillance authority without undue delay, and in any case within the deadlines specified.",
+        "priority": "MANDATORY",
+        "deadline": "Ongoing — within 15 days (or 2/10 days for serious incidents involving death or irreversible disruption)"
+      },
+      {
+        "id": "hr_fria",
+        "article": "Article 27",
+        "requirement": "Where the deployer is a public authority or entity providing public services, conduct a Fundamental Rights Impact Assessment (FRIA) before deployment.",
+        "priority": "CONDITIONAL",
+        "deadline": "Before first use"
+      }
+    ],
+    "confidence_score": 0.95,
+    "clinical_notes": "This system clearly qualifies as high-risk under multiple pathways. First, as explicitly stated SaMD under MDR 2017/745, it automatically triggers Article 6(1) requirements. Second, the system's intended purpose—recommending chemotherapy protocols—directly affects critical treatment decisions in oncology, arguably falling under Annex III Point 5(b) health-related decision-making. From a clinical perspective, chemotherapy protocol selection is among the highest-stakes decisions in medicine, involving significant toxicity risks, survival implications, and quality-of-life considerations. While described as providing 'recommendations' for oncologists, the system's integration of complex genomic and biomarker data suggests it may substantially influence or even dominate clinical decision-making in practice, particularly if it processes information beyond typical human cognitive capacity. The use of tumour biomarkers and genomic data implies the system is performing diagnostic interpretation (identifying treatment-relevant molecular features) and therapeutic matching—both core clinical functions. The 'confidence score' output suggests the system is making probabilistic clinical judgments. Conservative classification as high-risk is warranted given: (1) direct SaMD designation; (2) life-critical application domain; (3) potential for over-reliance in genomically-complex cases; (4) systemic chemotherapy's narrow therapeutic window. Oncologists must retain ultimate decision authority, and the system should be positioned as clinical decision support, not autonomous decision-making. Extensive clinical validation, bias testing across cancer types and populations, and transparency regarding training data limitations are essential.",
+    "samd_flag": true,
+    "requires_conformity_assessment": true,
+    "requires_notified_body": true
+  },
+  "note_summariser": {
+    "risk_level": "MINIMAL_RISK",
+    "annex_iii_categories": [],
+    "article_5_flags": [],
+    "legal_basis": [
+      {
+        "article": "Article 6",
+        "title": "Classification rules for high-risk AI systems",
+        "excerpt": "High-risk AI systems are those listed in Annex III and certain AI systems that are safety components of products or are themselves products covered by harmonised legislation. The system must be intended to be used as a safety component or the product itself must be required to undergo third-party conformity assessment.",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+      },
+      {
+        "article": "Annex III, Point 5(b)",
+        "title": "High-risk AI systems in health (safety of persons)",
+        "excerpt": "AI systems intended to be used for making or assisting in making diagnoses, or for making or assisting in making decisions on treatment, including prescription of medicinal products and medical devices, or for monitoring of patients.",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+      },
+      {
+        "article": "Recital 6",
+        "title": "AI systems for research purposes",
+        "excerpt": "AI systems specifically developed and used solely for research and innovation purposes should not be subject to requirements intended for systems placed on the market or put into service.",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+      }
+    ],
+    "compliance_requirements": [
+      {
+        "id": "mr_voluntary_code",
+        "article": "Article 95",
+        "requirement": "Consider voluntary adherence to codes of conduct promoting the application of high-risk requirements (e.g. transparency, human oversight, bias mitigation) on a voluntary basis.",
+        "priority": "RECOMMENDED",
+        "deadline": "Ongoing"
+      },
+      {
+        "id": "mr_gdpr_base",
+        "article": "GDPR (cross-cutting)",
+        "requirement": "Ensure compliance with GDPR for any processing of personal or health data, regardless of AI Act classification.",
+        "priority": "MANDATORY",
+        "deadline": "Ongoing"
+      },
+      {
+        "id": "mr_monitor_scope",
+        "article": "Article 6",
+        "requirement": "Monitor intended purpose and deployment context. If substantial modification alters risk profile, reassess classification.",
+        "priority": "RECOMMENDED",
+        "deadline": "Ongoing"
+      }
+    ],
+    "confidence_score": 0.95,
+    "clinical_notes": "From a clinical perspective, NoteBrief operates entirely outside the care pathway and does not interface with patient treatment decisions. The system processes de-identified data exclusively for research purposes, meaning it is disconnected from individual patient identities and clinical workflows. It does not generate diagnoses, treatment recommendations, or risk stratifications that would influence clinician behavior or patient outcomes. The de-identification is critical: under GDPR and clinical safety frameworks, once data is irreversibly anonymized for research, systems processing that data do not carry the same patient safety implications as clinical decision support tools. This system resembles secondary use infrastructure common in academic medical centers—similar to data warehouses that support epidemiological studies—and would not typically require medical device registration or AI Act high-risk classification. However, organizations must ensure robust de-identification processes (per GDPR Article 89) and that outputs are not re-purposed for clinical use without appropriate regulatory pathways. If any re-identification risk exists or if summarized outputs are later fed back into clinical systems, classification would need reassessment.",
+    "samd_flag": false,
+    "requires_conformity_assessment": false,
+    "requires_notified_body": false
+  },
+  "wearable_dashboard": {
+    "risk_level": "MINIMAL_RISK",
+    "annex_iii_categories": [],
+    "article_5_flags": [],
+    "legal_basis": [
+      {
+        "article": "Article 6(1)",
+        "title": "Classification rules for high-risk AI systems",
+        "excerpt": "An AI system shall be considered high-risk where both of the following conditions are fulfilled: (a) the AI system is intended to be used as a safety component of a product, or the AI system is itself a product, covered by the Union harmonisation legislation listed in Annex I; (b) the product whose safety component pursuant to point (a) is the AI system, or the AI system itself as a product, is required to undergo a third-party conformity assessment.",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+      },
+      {
+        "article": "Annex III, Point 5(b)",
+        "title": "High-risk AI systems in health - safety of persons",
+        "excerpt": "AI systems intended to be used for making decisions on access to health care services or to establish priority access to such services or to make decisions on reimbursement.",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+      },
+      {
+        "article": "Recital 60",
+        "title": "Well-being applications not high-risk",
+        "excerpt": "AI systems intended to be used only for the purpose of monitoring or improving the health condition or well-being of individuals, without establishing a medical diagnosis or having any direct medical purpose, should not be considered as high-risk.",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+      }
+    ],
+    "compliance_requirements": [
+      {
+        "id": "mr_voluntary_code",
+        "article": "Article 95",
+        "requirement": "Consider voluntary adherence to codes of conduct promoting the application of high-risk requirements (e.g. transparency, human oversight, bias mitigation) on a voluntary basis.",
+        "priority": "RECOMMENDED",
+        "deadline": "Ongoing"
+      },
+      {
+        "id": "mr_gdpr_base",
+        "article": "GDPR (cross-cutting)",
+        "requirement": "Ensure compliance with GDPR for any processing of personal or health data, regardless of AI Act classification.",
+        "priority": "MANDATORY",
+        "deadline": "Ongoing"
+      },
+      {
+        "id": "mr_monitor_scope",
+        "article": "Article 6",
+        "requirement": "Monitor intended purpose and deployment context. If substantial modification alters risk profile, reassess classification.",
+        "priority": "RECOMMENDED",
+        "deadline": "Ongoing"
+      }
+    ],
+    "confidence_score": 0.95,
+    "clinical_notes": "StepSense is a pure wellness/fitness tracker with no clinical claims or diagnostic functionality. It does not meet the threshold for SaMD under MDR/IVDR as it makes no medical claims, does not influence clinical decisions, and serves solely informational purposes for consumer health awareness. The system displays passively collected data (steps, heart rate, sleep) without interpretation, risk stratification, or actionable clinical recommendations. From a clinical perspective, this is analogous to a digital pedometer or fitness journal—useful for personal motivation but not a medical tool. No physician would rely on this for clinical decision-making, and it does not replace or supplement any clinical function. Recital 60 explicitly excludes such well-being applications from high-risk classification. No regulatory concerns under the AI Act, though standard consumer protection and data privacy laws (GDPR) apply.",
+    "samd_flag": false,
+    "requires_conformity_assessment": false,
+    "requires_notified_body": false
+  },
+  "patient_chatbot": {
+    "risk_level": "MINIMAL_RISK",
+    "annex_iii_categories": [],
+    "article_5_flags": [],
+    "legal_basis": [
+      {
+        "article": "Article 6(1)",
+        "title": "Classification rules for high-risk AI systems",
+        "excerpt": "An AI system shall be considered high-risk where both of the following conditions are fulfilled: (a) the AI system is intended to be used as a safety component of a product, or the AI system is itself a product, covered by the Union harmonisation legislation listed in Annex I; (b) the product whose safety component pursuant to point (a) is the AI system, or the AI system itself as a product, is required to undergo a third-party conformity assessment.",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+      },
+      {
+        "article": "Annex III, Point 5(b)",
+        "title": "High-risk AI systems in health sector",
+        "excerpt": "AI systems intended to be used for making or assisting in making medical diagnosis",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+      },
+      {
+        "article": "Article 50",
+        "title": "Transparency obligations for certain AI systems",
+        "excerpt": "Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+      }
+    ],
+    "compliance_requirements": [
+      {
+        "id": "mr_voluntary_code",
+        "article": "Article 95",
+        "requirement": "Consider voluntary adherence to codes of conduct promoting the application of high-risk requirements (e.g. transparency, human oversight, bias mitigation) on a voluntary basis.",
+        "priority": "RECOMMENDED",
+        "deadline": "Ongoing"
+      },
+      {
+        "id": "mr_gdpr_base",
+        "article": "GDPR (cross-cutting)",
+        "requirement": "Ensure compliance with GDPR for any processing of personal or health data, regardless of AI Act classification.",
+        "priority": "MANDATORY",
+        "deadline": "Ongoing"
+      },
+      {
+        "id": "mr_monitor_scope",
+        "article": "Article 6",
+        "requirement": "Monitor intended purpose and deployment context. If substantial modification alters risk profile, reassess classification.",
+        "priority": "RECOMMENDED",
+        "deadline": "Ongoing"
+      }
+    ],
+    "confidence_score": 0.95,
+    "clinical_notes": "This system performs purely administrative functions (appointment scheduling, hours information, accessing existing test results) without providing any medical advice, diagnosis, or clinical decision support. It does not fall under Annex III point 5 as it neither makes nor assists in making medical diagnoses or treatment decisions. From a clinical perspective, this is equivalent to a receptionist answering routine questions - it facilitates access to care but does not participate in clinical workflows. The system does not qualify as SaMD under MDR/IVDR as it has no medical purpose. However, transparency obligations under Article 50 apply because it directly interacts with patients who must be informed they are conversing with an AI system, not a human staff member. Clear disclosure at the start of each chat session is essential to meet this requirement.",
+    "samd_flag": false,
+    "requires_conformity_assessment": false,
+    "requires_notified_body": false
+  },
+  "social_benefit_scoring": {
+    "risk_level": "PROHIBITED",
+    "annex_iii_categories": [],
+    "article_5_flags": [
+      "Article 5(1)(a) - Subliminal manipulation (potential indirect effect)",
+      "Article 5(1)(c) - Social scoring by public authorities",
+      "art5_1_c"
+    ],
+    "legal_basis": [
+      {
+        "article": "Article 5(1)(c)",
+        "title": "Prohibited artificial intelligence practices",
+        "excerpt": "The placing on the market, the putting into service for this specific purpose, or the use of an AI system by public authorities or on their behalf for the evaluation or classification of the trustworthiness of natural persons over a certain period of time based on their social behaviour or known or predicted personal or personality characteristics, with the social score leading to either or both of the following: (i) detrimental or unfavourable treatment of certain natural persons or whole groups thereof in social contexts which are unrelated to the contexts in which the data was originally generated or collected; (ii) detrimental or unfavourable treatment of certain natural persons or whole groups thereof that is unjustified or disproportionate to their social behaviour or its gravity.",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+      },
+      {
+        "article": "Article 99",
+        "title": "Penalties",
+        "excerpt": "Infringements of the prohibition of the artificial intelligence practices referred to in Article 5 shall be subject to administrative fines of up to EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the preceding financial year, whichever is higher.",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+      }
+    ],
+    "compliance_requirements": [
+      {
+        "id": "prohibited_01",
+        "article": "Article 5",
+        "requirement": "Cease development and deployment. The AI system falls under one of the prohibited practices listed in Article 5 and cannot be placed on the Union market, put into service, or used.",
+        "priority": "MANDATORY",
+        "deadline": "Immediate — since 2 February 2025"
+      },
+      {
+        "id": "prohibited_02",
+        "article": "Article 5",
+        "requirement": "Conduct a formal legal review to confirm the prohibition finding and document the discontinuation decision with dated records.",
+        "priority": "MANDATORY",
+        "deadline": "Immediate"
+      }
+    ],
+    "confidence_score": 1.0,
+    "clinical_notes": "This system represents a clear-cut prohibited practice under Article 5(1)(c). As a physician and regulatory expert, I must emphasize that this is NOT a healthcare AI system despite using health data inputs. It is a social scoring mechanism that: (1) uses healthcare utilization patterns and lifestyle behaviors as proxies for social worthiness; (2) is deployed by a public authority; (3) explicitly grants or denies access to general social services unrelated to the health context where data originated; and (4) creates systemic discrimination against individuals with chronic conditions, disabilities, or those from disadvantaged backgrounds who may have higher healthcare utilization through no fault of their own. This violates fundamental rights to non-discrimination and human dignity. The system conflates healthcare needs with social merit, which is ethically indefensible and legally prohibited. Clinical data should NEVER be weaponized for social control. The use of 'lifestyle signals' further suggests potential surveillance of legally protected health behaviors. Any deployment of this system would trigger maximum penalties under Article 99 (up to €35M or 7% global turnover). This is non-negotiable - the system cannot be made compliant through modifications; the fundamental purpose is prohibited.",
+    "samd_flag": false,
+    "requires_conformity_assessment": false,
+    "requires_notified_body": false
+  }
+}

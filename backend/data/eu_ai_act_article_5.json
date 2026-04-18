@@ -1,0 +1,58 @@
+{
+  "source": "Regulation (EU) 2024/1689 — Article 5 (Prohibited AI practices)",
+  "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+  "prohibitions": [
+    {
+      "id": "art5_1_a",
+      "title": "Subliminal, manipulative or deceptive techniques",
+      "text": "AI systems that deploy subliminal techniques beyond a person's consciousness or purposefully manipulative or deceptive techniques, with the objective or effect of materially distorting the behaviour of a person or a group of persons by appreciably impairing their ability to make an informed decision, thereby causing significant harm.",
+      "keywords": ["subliminal", "manipulation", "deceptive technique", "behavior distortion"]
+    },
+    {
+      "id": "art5_1_b",
+      "title": "Exploitation of vulnerabilities",
+      "text": "AI systems that exploit any of the vulnerabilities of a natural person or a specific group of persons due to their age, disability or a specific social or economic situation, with the objective or effect of materially distorting the behaviour of that person in a manner that causes or is reasonably likely to cause significant harm.",
+      "keywords": ["exploit vulnerability", "age-based targeting", "disability targeting", "economic exploitation"]
+    },
+    {
+      "id": "art5_1_c",
+      "title": "Social scoring",
+      "text": "AI systems for the evaluation or classification of natural persons or groups thereof over a certain period of time based on their social behaviour or known, inferred or predicted personal or personality characteristics, with the social score leading to detrimental or unfavourable treatment.",
+      "keywords": ["social scoring", "social score", "citizen scoring", "behavior-based benefits"]
+    },
+    {
+      "id": "art5_1_d",
+      "title": "Individual crime-risk prediction based solely on profiling",
+      "text": "AI systems for making risk assessments of natural persons in order to assess or predict the risk of a natural person committing a criminal offence, based solely on the profiling of a natural person or on assessing their personality traits and characteristics.",
+      "keywords": ["predictive policing", "crime prediction", "criminal profiling"]
+    },
+    {
+      "id": "art5_1_e",
+      "title": "Untargeted scraping for facial recognition databases",
+      "text": "AI systems that create or expand facial recognition databases through the untargeted scraping of facial images from the internet or CCTV footage.",
+      "keywords": ["facial recognition scraping", "facial database", "cctv scraping"]
+    },
+    {
+      "id": "art5_1_f",
+      "title": "Emotion recognition in workplace or education",
+      "text": "AI systems to infer emotions of a natural person in the areas of workplace and education institutions, except where the use of the AI system is intended to be put in place or into the market for medical or safety reasons.",
+      "keywords": ["emotion recognition workplace", "emotion recognition school", "employee sentiment monitoring"]
+    },
+    {
+      "id": "art5_1_g",
+      "title": "Biometric categorisation based on sensitive attributes",
+      "text": "Biometric categorisation systems that categorise individually natural persons based on their biometric data to deduce or infer their race, political opinions, trade union membership, religious or philosophical beliefs, sex life or sexual orientation.",
+      "keywords": ["biometric categorisation", "race inference", "sexual orientation inference", "religion inference"]
+    },
+    {
+      "id": "art5_1_h",
+      "title": "Real-time remote biometric identification in public spaces",
+      "text": "The use of real-time remote biometric identification systems in publicly accessible spaces for the purposes of law enforcement, save for narrowly defined exceptions.",
+      "keywords": ["real-time biometric identification", "public space surveillance", "live facial recognition"]
+    }
+  ],
+  "healthcare_carveouts": {
+    "emotion_recognition_medical": "Article 5(1)(f) explicitly exempts AI systems placed on the market for medical or safety reasons — e.g. pain assessment, delirium screening, affective-state monitoring in ICU. These are NOT prohibited but typically fall under HIGH_RISK as SaMD.",
+    "biometric_medical_diagnosis": "Biometric-based clinical diagnostics (e.g. gait analysis for Parkinson's) fall under MDR/IVDR as SaMD and are high-risk, not prohibited, provided they do not infer the sensitive attributes listed in Article 5(1)(g)."
+  }
+}

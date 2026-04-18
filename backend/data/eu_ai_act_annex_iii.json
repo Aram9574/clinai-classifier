@@ -1,0 +1,68 @@
+{
+  "source": "Regulation (EU) 2024/1689 — Annex III",
+  "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+  "categories": {
+    "1": {
+      "title": "Biometrics",
+      "description": "Remote biometric identification systems; biometric categorisation according to sensitive attributes; emotion recognition systems."
+    },
+    "2": {
+      "title": "Critical infrastructure",
+      "description": "AI systems intended to be used as safety components in the management and operation of critical digital infrastructure, road traffic, or in the supply of water, gas, heating or electricity."
+    },
+    "3": {
+      "title": "Education and vocational training",
+      "description": "AI systems determining access, admission, or assignment to educational institutions; evaluating learning outcomes; assessing appropriate level of education; monitoring prohibited behaviour during tests."
+    },
+    "4": {
+      "title": "Employment, workers management and access to self-employment",
+      "description": "AI systems for recruitment or selection; decisions affecting terms of work-related relationships, promotion or termination; task allocation; monitoring and evaluating performance."
+    },
+    "5": {
+      "title": "Access to and enjoyment of essential private and public services and benefits",
+      "subcategories": {
+        "5a": "AI systems intended to be used by public authorities or on behalf of public authorities to evaluate the eligibility of natural persons for essential public assistance benefits and services, including healthcare services, as well as to grant, reduce, revoke, or reclaim such benefits and services.",
+        "5b": "AI systems intended to be used to evaluate the creditworthiness of natural persons or establish their credit score, with the exception of AI systems used for the purpose of detecting financial fraud.",
+        "5c": "AI systems intended to be used for risk assessment and pricing in relation to natural persons in the case of life and health insurance.",
+        "5d": "AI systems intended to evaluate and classify emergency calls by natural persons or to be used to dispatch, or to establish priority in the dispatching of, emergency first response services, including by police, firefighters and medical aid, as well as emergency healthcare patient triage systems."
+      }
+    },
+    "6": {
+      "title": "Law enforcement",
+      "description": "AI systems used by or on behalf of law enforcement for risk assessments, polygraph, evidence reliability evaluation, profiling, and crime analytics."
+    },
+    "7": {
+      "title": "Migration, asylum and border control management",
+      "description": "AI systems for polygraphs, risk assessment of irregular migration, examination of applications for asylum/visa/residence permits, and detection/identification of natural persons in border control."
+    },
+    "8": {
+      "title": "Administration of justice and democratic processes",
+      "description": "AI systems intended to assist judicial authorities in researching and interpreting facts and the law; AI systems intended to influence the outcome of elections or voting behaviour."
+    }
+  },
+  "health_relevant_cross_references": {
+    "medical_devices": "AI systems that are safety components of products regulated under Regulation (EU) 2017/745 (MDR) or Regulation (EU) 2017/746 (IVDR), or that are themselves such products, are classified as high-risk under Article 6(1).",
+    "emergency_triage": "Emergency healthcare patient triage systems are explicitly listed in Annex III point 5(d).",
+    "eligibility_for_healthcare": "Annex III 5(a) covers AI used by public authorities to determine eligibility for healthcare services and benefits.",
+    "health_insurance_pricing": "Annex III 5(c) covers risk assessment and pricing for life and health insurance."
+  },
+  "classification_keywords": {
+    "HIGH_RISK": [
+      "diagnosis", "diagnostic", "triage", "clinical decision support", "cdss",
+      "treatment recommendation", "treatment protocol", "medical device", "samd",
+      "radiology ai", "pathology ai", "readmission risk", "mortality prediction",
+      "sepsis prediction", "patient deterioration", "eligibility for benefits",
+      "eligibility for healthcare", "health insurance pricing", "insurance underwriting",
+      "emergency dispatch", "emergency call triage", "mdr", "ivdr"
+    ],
+    "LIMITED_RISK": [
+      "chatbot", "patient-facing conversational", "information retrieval",
+      "note summarization", "clinical note extraction for research",
+      "transcription", "documentation assistant"
+    ],
+    "MINIMAL_RISK": [
+      "wearable dashboard", "fitness tracker", "wellness app", "appointment scheduling",
+      "hospital inventory", "staff rostering", "research analytics on de-identified data"
+    ]
+  }
+}

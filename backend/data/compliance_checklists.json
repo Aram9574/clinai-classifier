@@ -1,0 +1,174 @@
+{
+  "source": "Regulation (EU) 2024/1689 — Chapter III (High-risk) and Chapter IV (Transparency)",
+  "checklists": {
+    "PROHIBITED": [
+      {
+        "id": "prohibited_01",
+        "article": "Article 5",
+        "requirement": "Cease development and deployment. The AI system falls under one of the prohibited practices listed in Article 5 and cannot be placed on the Union market, put into service, or used.",
+        "priority": "MANDATORY",
+        "deadline": "Immediate — since 2 February 2025"
+      },
+      {
+        "id": "prohibited_02",
+        "article": "Article 5",
+        "requirement": "Conduct a formal legal review to confirm the prohibition finding and document the discontinuation decision with dated records.",
+        "priority": "MANDATORY",
+        "deadline": "Immediate"
+      }
+    ],
+    "HIGH_RISK": [
+      {
+        "id": "hr_risk_mgmt",
+        "article": "Article 9",
+        "requirement": "Establish, implement, document and maintain a risk management system running throughout the entire lifecycle of the AI system.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market — by 2 August 2026"
+      },
+      {
+        "id": "hr_data_governance",
+        "article": "Article 10",
+        "requirement": "Apply data governance practices to training, validation and testing datasets: relevance, representativeness, freedom from errors, and appropriate statistical properties. Examine for biases affecting health equity.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_technical_docs",
+        "article": "Article 11",
+        "requirement": "Draw up technical documentation demonstrating conformity with the requirements of Chapter III, Section 2. Must be kept up to date.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_record_keeping",
+        "article": "Article 12",
+        "requirement": "Enable automatic recording of events (logs) over the duration of the system lifetime to ensure traceability.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_transparency",
+        "article": "Article 13",
+        "requirement": "Design for sufficient transparency: provide clear instructions for use enabling deployers to interpret outputs appropriately in the clinical context.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_human_oversight",
+        "article": "Article 14",
+        "requirement": "Design for effective human oversight. In clinical contexts: ensure clinicians can override, interpret, and refuse AI outputs without automation bias.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_accuracy_robustness",
+        "article": "Article 15",
+        "requirement": "Achieve appropriate levels of accuracy, robustness and cybersecurity; document performance metrics and validation methodology.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_qms",
+        "article": "Article 17",
+        "requirement": "Establish a Quality Management System (QMS). Where the provider is already subject to ISO 13485 (MDR/IVDR), integration is permitted.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_conformity_assessment",
+        "article": "Article 43",
+        "requirement": "Undergo the applicable conformity assessment procedure. For SaMD (MDR/IVDR), this is typically performed by a Notified Body and combined with the existing medical device conformity assessment.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_ce_marking",
+        "article": "Article 48",
+        "requirement": "Affix the CE marking and draw up the EU declaration of conformity before placing the system on the market.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_registration",
+        "article": "Article 49",
+        "requirement": "Register the high-risk AI system in the EU database before placing it on the market or putting it into service.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "hr_post_market",
+        "article": "Article 72",
+        "requirement": "Establish a post-market monitoring system to collect, document and analyse performance data throughout the lifetime of the system.",
+        "priority": "MANDATORY",
+        "deadline": "From placing on the market"
+      },
+      {
+        "id": "hr_incident_reporting",
+        "article": "Article 73",
+        "requirement": "Report serious incidents to the market surveillance authority without undue delay, and in any case within the deadlines specified.",
+        "priority": "MANDATORY",
+        "deadline": "Ongoing — within 15 days (or 2/10 days for serious incidents involving death or irreversible disruption)"
+      },
+      {
+        "id": "hr_fria",
+        "article": "Article 27",
+        "requirement": "Where the deployer is a public authority or entity providing public services, conduct a Fundamental Rights Impact Assessment (FRIA) before deployment.",
+        "priority": "CONDITIONAL",
+        "deadline": "Before first use"
+      }
+    ],
+    "LIMITED_RISK": [
+      {
+        "id": "lr_transparency_chatbot",
+        "article": "Article 50(1)",
+        "requirement": "If the system interacts directly with natural persons (e.g. patient-facing chatbot), inform them they are interacting with an AI system, unless this is obvious from context.",
+        "priority": "MANDATORY",
+        "deadline": "Before placing on the market — by 2 August 2026"
+      },
+      {
+        "id": "lr_transparency_synthetic",
+        "article": "Article 50(2)",
+        "requirement": "If the system generates synthetic audio, image, video or text content, mark outputs as artificially generated or manipulated in a machine-readable format.",
+        "priority": "CONDITIONAL",
+        "deadline": "Before placing on the market"
+      },
+      {
+        "id": "lr_deepfake",
+        "article": "Article 50(4)",
+        "requirement": "For deepfakes, clearly disclose that the content has been artificially generated or manipulated.",
+        "priority": "CONDITIONAL",
+        "deadline": "At point of publication"
+      },
+      {
+        "id": "lr_documentation",
+        "article": "Recital 27",
+        "requirement": "Maintain internal documentation of classification rationale and transparency measures applied. Recommended even though not strictly mandatory for limited-risk systems.",
+        "priority": "RECOMMENDED",
+        "deadline": "Ongoing"
+      }
+    ],
+    "MINIMAL_RISK": [
+      {
+        "id": "mr_voluntary_code",
+        "article": "Article 95",
+        "requirement": "Consider voluntary adherence to codes of conduct promoting the application of high-risk requirements (e.g. transparency, human oversight, bias mitigation) on a voluntary basis.",
+        "priority": "RECOMMENDED",
+        "deadline": "Ongoing"
+      },
+      {
+        "id": "mr_gdpr_base",
+        "article": "GDPR (cross-cutting)",
+        "requirement": "Ensure compliance with GDPR for any processing of personal or health data, regardless of AI Act classification.",
+        "priority": "MANDATORY",
+        "deadline": "Ongoing"
+      },
+      {
+        "id": "mr_monitor_scope",
+        "article": "Article 6",
+        "requirement": "Monitor intended purpose and deployment context. If substantial modification alters risk profile, reassess classification.",
+        "priority": "RECOMMENDED",
+        "deadline": "Ongoing"
+      }
+    ]
+  }
+}

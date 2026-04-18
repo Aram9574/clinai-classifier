@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>ClinAI Classifier — EU AI Act Audit Report</title>
+<style>
+  @page { size: A4; margin: 2cm; }
+  body { font-family: "Helvetica", "Arial", sans-serif; color: #111827; font-size: 10.5pt; line-height: 1.45; }
+  h1 { font-size: 20pt; margin: 0 0 0.2em 0; color: #0f172a; }
+  h2 { font-size: 13pt; margin: 1.2em 0 0.4em 0; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.2em; }
+  h3 { font-size: 11pt; margin: 0.8em 0 0.3em 0; color: #1f2937; }
+  .meta { font-size: 9pt; color: #4b5563; margin-bottom: 1em; }
+  .badge { display: inline-block; padding: 4px 12px; border-radius: 4px; color: white; font-weight: bold; letter-spacing: 0.5px; font-size: 11pt; }
+  .badge-PROHIBITED { background: #dc2626; }
+  .badge-HIGH_RISK { background: #ea580c; }
+  .badge-LIMITED_RISK { background: #ca8a04; }
+  .badge-MINIMAL_RISK { background: #16a34a; }
+  table { width: 100%; border-collapse: collapse; margin-top: 0.5em; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #e5e7eb; vertical-align: top; font-size: 10pt; }
+  th { background: #f3f4f6; font-weight: bold; }
+  .priority-MANDATORY { color: #b91c1c; font-weight: bold; }
+  .priority-RECOMMENDED { color: #1d4ed8; }
+  .priority-CONDITIONAL { color: #7c3aed; }
+  .legal-excerpt { font-style: italic; color: #374151; margin-left: 1em; border-left: 3px solid #d1d5db; padding-left: 0.7em; }
+  .disclaimer { font-size: 9pt; color: #6b7280; border: 1px solid #e5e7eb; padding: 0.8em; margin-top: 1.5em; background: #f9fafb; }
+  .kv { margin: 2px 0; }
+  .kv span.k { display: inline-block; width: 200px; color: #4b5563; font-weight: bold; }
+  footer { font-size: 8.5pt; color: #6b7280; margin-top: 2em; border-top: 1px solid #e5e7eb; padding-top: 0.5em; }
+</style>
+</head>
+<body>
+
+<h1>ClinAI Classifier — EU AI Act Audit Report</h1>
+<div class="meta">
+  Generated {{ generated_at }} · Report version 1.0.0 · Regulation (EU) 2024/1689
+</div>
+
+<h2>1. Executive Summary</h2>
+<p>Risk classification: <span class="badge badge-{{ data.risk_level }}">{{ data.risk_level }}</span></p>
+<div class="kv"><span class="k">Confidence score:</span>{{ "%.2f"|format(data.confidence_score) }}</div>
+<div class="kv"><span class="k">SaMD flag:</span>{{ "Yes" if data.samd_flag else "No" }}</div>
+<div class="kv"><span class="k">Requires conformity assessment:</span>{{ "Yes" if data.requires_conformity_assessment else "No" }}</div>
+<div class="kv"><span class="k">Requires notified body:</span>{{ "Yes" if data.requires_notified_body else "No" }}</div>
+
+<h2>2. Legal Classification</h2>
+{% if data.annex_iii_categories %}
+  <h3>Annex III categories</h3>
+  <ul>
+    {% for c in data.annex_iii_categories %}<li>{{ c }}</li>{% endfor %}
+  </ul>
+{% endif %}
+{% if data.article_5_flags %}
+  <h3>Article 5 prohibitions triggered</h3>
+  <ul>
+    {% for f in data.article_5_flags %}<li>{{ f }}</li>{% endfor %}
+  </ul>
+{% endif %}
+
+<h3>Legal basis</h3>
+{% for ref in data.legal_basis %}
+  <div style="margin-bottom: 0.6em;">
+    <strong>{{ ref.article }} — {{ ref.title }}</strong><br/>
+    <div class="legal-excerpt">{{ ref.excerpt }}</div>
+    <div style="font-size: 8.5pt; color: #6b7280;">Source: {{ ref.url }}</div>
+  </div>
+{% endfor %}
+
+<h2>3. Compliance Checklist</h2>
+<table>
+  <thead>
+    <tr><th>Article</th><th>Requirement</th><th>Priority</th><th>Deadline</th></tr>
+  </thead>
+  <tbody>
+  {% for item in data.compliance_requirements %}
+    <tr>
+      <td>{{ item.article }}</td>
+      <td>{{ item.requirement }}</td>
+      <td class="priority-{{ item.priority }}">{{ item.priority }}</td>
+      <td>{{ item.deadline }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+<h2>4. Clinical Context Notes</h2>
+<p>{{ data.clinical_notes }}</p>
+
+<h2>5. Limitations and Disclaimer</h2>
+<div class="disclaimer">
+  This report is produced by an automated classification tool combining an LLM-based regulatory agent
+  with a static rules engine. It does <strong>not</strong> constitute legal advice, a conformity
+  assessment, nor regulatory approval of any kind. Final classification and compliance determinations
+  must be made in consultation with qualified legal counsel, your Notified Body (where applicable),
+  and — for medical devices — in coordination with MDR/IVDR processes.
+  Authored by Aram Zakzuk, MD — Clinical AI Specialist. Tool released under the MIT license.
+</div>
+
+<h2>6. Methodology Reference</h2>
+<p>
+  Classification follows a two-stage pipeline: (1) a Claude-based regulatory agent analyses the system
+  description against EU AI Act (Regulation 2024/1689) provisions, focusing on Article 5 (prohibited
+  practices) and Annex III (high-risk categories), with cross-references to MDR/IVDR for SaMD; (2) a
+  static rules engine validates the agent's output against keyword heuristics and compliance JSON
+  schemas and escalates — but never downgrades — the risk level.
+</p>
+
+<footer>
+  ClinAI Classifier · Open-source, MIT license · Aram Zakzuk MD · This document was generated automatically.
+</footer>
+
+</body>
+</html>
