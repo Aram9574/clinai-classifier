@@ -1,27 +1,3 @@
----
-title: ClinAI Classifier - EU AI Act para IA en Salud
-emoji: 🏥
-colorFrom: blue
-colorTo: green
-sdk: docker
-app_port: 8501
-pinned: true
-license: mit
-tags:
-  - healthcare
-  - clinical-ai
-  - eu-ai-act
-  - compliance
-  - medical
-  - regulation
-  - cdss
-  - samd
-  - healthtech
-  - medtech
----
-
-<div align="center">
-
 # 🏥 ClinAI Classifier
 
 ### Clasifica tu sistema de IA sanitario bajo el EU AI Act en segundos
